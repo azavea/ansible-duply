@@ -1,0 +1,12 @@
+---
+duply_version: "1.5.10-1"
+duply_profile: "test"
+duply_gpg_key: "disabled"
+duply_gpg_pw: ""
+duply_target: "s3://s3.amazonaws.com/bucket{{ duply_source }}"
+duply_target_user: ""
+duply_target_pass: ""
+duply_source: "/var/www/html"
+duply_max_age: "1M"
+duply_excludes: []
+duply_cron_special_time: "daily"

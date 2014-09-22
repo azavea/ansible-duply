@@ -1,0 +1,25 @@
+---
+- name: Install Duply
+  apt: pkg={{ item }} state=present
+  with_items:
+    - python-boto
+    - duply={{ duply_version }}
+
+- name: Create Duply configuration directory structure
+  file: path=/etc/duply/{{ duply_profile }}
+        mode=0700
+        state=directory
+
+- name: Configure Duply
+  template: src={{ item }}.j2
+            dest=/etc/duply/{{ duply_profile }}/{{ item }}
+            mode=0600
+  with_items:
+    - conf
+    - exclude
+
+- name: Setup a Duply cron job
+  cron: name="duply-{{ duply_profile }}"
+        special_time="{{ duply_cron_special_time }}"
+        job="duply {{ duply_profile }} backup"
+        state=present

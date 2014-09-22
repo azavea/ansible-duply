@@ -1,0 +1,10 @@
+---
+- hosts: all
+  roles:
+    - role: "azavea.duply"
+      duply_profile: "home"
+      duply_target: "s3://s3.amazonaws.com/bucket{{ duply_source }}"
+      duply_target_user: "<AWS_ACCESS_KEY>"
+      duply_target_pass: "<AWS_SECRET_KEY>"
+      duply_source: "/home/vagrant"
+      duply_cron_special_time: "hourly"
