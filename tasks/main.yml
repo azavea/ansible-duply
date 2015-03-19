@@ -17,9 +17,3 @@
   with_items:
     - conf
     - exclude
-
-- name: Setup a Duply cron job
-  cron: name="duply-{{ duply_profile }}"
-        special_time="{{ duply_cron_special_time }}"
-        job="duply {{ duply_profile }} backup"
-        state=present

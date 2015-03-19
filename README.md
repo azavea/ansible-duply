@@ -14,7 +14,6 @@ An Ansible role for installing [Duply](http://duply.net/). In addition, this rol
 - `duply_source` - Source path of backups
 - `duply_max_age` - Maximum age for backups (default: `1M` for 1 month)
 - `duply_excludes` - A list of backup exclusions  (default: `[]`)
-- `duply_cron_special_time` - A special time specification nickname (see [here](http://docs.ansible.com/cron_module.html) for details)
 
 ## Example Playbook
 

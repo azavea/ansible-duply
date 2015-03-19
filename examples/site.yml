@@ -7,4 +7,3 @@
       duply_target_user: "<AWS_ACCESS_KEY>"
       duply_target_pass: "<AWS_SECRET_KEY>"
       duply_source: "/home/vagrant"
-      duply_cron_special_time: "hourly"
