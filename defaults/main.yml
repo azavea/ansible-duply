@@ -9,4 +9,3 @@ duply_target_pass: ""
 duply_source: "/var/www/html"
 duply_max_age: "1M"
 duply_excludes: []
-duply_cron_special_time: "daily"
