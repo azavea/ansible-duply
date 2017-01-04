@@ -13,6 +13,8 @@ An Ansible role for installing [Duply](http://duply.net/). In addition, this rol
 - `duply_target_pass` - Target password
 - `duply_source` - Source path of backups
 - `duply_max_age` - Maximum age for backups (default: `1M` for 1 month)
+- `duply_max_full_age` - Maximum age of full backups
+- `duply_max_full_backups` - Maximum number of full backups
 - `duply_excludes` - A list of backup exclusions  (default: `[]`)
 
 ## Example Playbook

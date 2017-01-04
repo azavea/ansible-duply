@@ -8,4 +8,6 @@ duply_target_user: ""
 duply_target_pass: ""
 duply_source: "/var/www/html"
 duply_max_age: "1M"
+duply_max_full_age: "2W"
+duply_max_full_backups: "1"
 duply_excludes: []
