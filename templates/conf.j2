@@ -86,14 +86,14 @@ MAX_AGE={{ duply_max_age }}
 
 # Number of full backups to keep. Used for the "purge-full" command.
 # See duplicity man page, action "remove-all-but-n-full".
-#MAX_FULL_BACKUPS=1
+MAX_FULL_BACKUPS={{ duply_max_full_backups }}
 
 # activates duplicity --full-if-older-than option (since duplicity v0.4.4.RC3)
 # forces a full backup if last full backup reaches a specified age, for the
 # format of MAX_FULLBKP_AGE see duplicity man page, chapter TIME_FORMATS
 # Uncomment the following two lines to enable this setting.
-#MAX_FULLBKP_AGE=1M
-#DUPL_PARAMS="$DUPL_PARAMS --full-if-older-than $MAX_FULLBKP_AGE "
+MAX_FULLBKP_AGE='{{ duply_max_full_age }}'
+DUPL_PARAMS="$DUPL_PARAMS --full-if-older-than $MAX_FULLBKP_AGE "
 
 # sets duplicity --volsize option (available since v0.4.3.RC7)
 # set the size of backup chunks to VOLSIZE MB instead of the default 25MB.
